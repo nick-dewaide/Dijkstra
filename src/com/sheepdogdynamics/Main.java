@@ -43,6 +43,5 @@ class Main {
         // The paths below differ because the graph is bidirectional and B->D=25 while D->B=2
         System.out.println(graph.dijkstra(NODE_A, NODE_D));
         System.out.println(graph.dijkstra(NODE_D, NODE_A));
-
     }
 }

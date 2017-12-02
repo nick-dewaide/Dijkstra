@@ -35,20 +35,15 @@ public class Dijkstra {
                 }
             }
             if(destination.isVisited())
-            {
                 isPathFound = true;
-            } else if (nodesToVisit.isEmpty())
-            {
+            else if (nodesToVisit.isEmpty())
                 pathDoesNotExist = true;
-            }
         }
 
         if(pathDoesNotExist)
-        {
             path.append(String.format("NO PATH EXISTS BETWEEN NODES %s AND %s", origin.getName(), destination.getName()));
-        } else {
+        else
             backtracePath(destination);
-        }
 
         return path.toString();
     }

@@ -12,16 +12,13 @@ public class Graph {
     Graph(Node[] initNodes)
     {
         for(Node n: initNodes)
-        {
             nodeMap.put(n.getName(), n);
-        }
     }
 
     public String dijkstra(String originName, String destinationName)
     {
         String path = "";
-        if(nodeMap.containsKey(originName) && nodeMap.containsKey(destinationName))
-        {
+        if(nodeMap.containsKey(originName) && nodeMap.containsKey(destinationName)) {
             resetNodesAndSetNewOrigin(originName);
             path = Dijkstra.getPathDijkstra(nodeMap.get(originName), nodeMap.get(destinationName));
         } else {
@@ -34,9 +31,7 @@ public class Graph {
     public void resetNodesAndSetNewOrigin(String newOriginName)
     {
         for(Node n : nodeMap.values())
-        {
             n.reset();
-        }
         nodeMap.get(newOriginName).setDistanceFromOrigin(0);
     }
 }
