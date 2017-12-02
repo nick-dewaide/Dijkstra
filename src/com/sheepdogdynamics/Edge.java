@@ -20,7 +20,7 @@ public class Edge {
     public String toString()
     {
         System.out.println("EDGE TO: " + endNode.getName() + " WITH DISTANCE: " + edgeLength);
-        System.out.println("END NODE VISITED STATUS: " + endNode.getIsVisited());
+        System.out.println("END NODE VISITED STATUS: " + endNode.isVisited());
         return "";
     }
 }

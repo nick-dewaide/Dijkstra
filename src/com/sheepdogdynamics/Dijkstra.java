@@ -25,7 +25,7 @@ public class Dijkstra {
             currentNode.setVisited(true);
             for( Edge e : currentNode.getEdges() )
             {
-                if( !e.getEndNode().getIsVisited() ){
+                if( !e.getEndNode().isVisited() ){
                     nodesToVisit.add(e.getEndNode());
                     if( shouldUpdateEdgeNode(currentNode, e) )
                     {
@@ -34,7 +34,7 @@ public class Dijkstra {
                     }
                 }
             }
-            if(destination.getIsVisited())
+            if(destination.isVisited())
             {
                 isPathFound = true;
             } else if (nodesToVisit.isEmpty())

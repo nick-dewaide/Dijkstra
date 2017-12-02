@@ -20,7 +20,7 @@ public class Node {
     public Edge[] getEdges() { return edges; }
     public int getDistanceFromOrigin () { return distanceFromOrigin; }
     public Node getPreviousNode() { return previousNode; }
-    public boolean getIsVisited () { return isVisited; }
+    public boolean isVisited() { return isVisited; }
 
     public void setEdges(Edge[] initEdges) { edges = initEdges; }
     public void setDistanceFromOrigin(int value) { distanceFromOrigin = value; }
